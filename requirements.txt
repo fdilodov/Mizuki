@@ -5,6 +5,7 @@ langchain-community
 langchain-core
 langchain-chroma
 langchain-groq
+langchain-huggingface
 chromadb
 python-dotenv
 tiktoken
