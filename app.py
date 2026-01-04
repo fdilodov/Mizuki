@@ -143,8 +143,29 @@ def load_resources():
 
 vectorstore, llm = load_resources()
 
-# --- SIDEBAR (Updated for Sources.txt) ---
+# --- SIDEBAR SELECTION ---
 with st.sidebar:
+    st.title("🧠 AI Persona")
+    
+    # 1. Dropdown to choose the brain
+    selected_role = st.selectbox(
+        "Choose your Assistant:",
+        ["Mizu Doc", "Mizu Tech", "Mizu Soft", "Mizu Phys"],
+        index=0
+    )
+    
+    # Update session state based on selection
+    st.session_state.selected_persona = selected_role
+    current_p = PERSONAS[selected_role]
+    
+    # Show the specific icon and description
+    st.image(current_p["icon"], width=80)
+    st.caption(current_p["description"])
+    
+    st.markdown("---")
+    # ... rest of your sidebar code (Memory status, etc.)
+
+# --- SIDEBAR (Updated for Sources.txt) ---
     st.header("System Status")
     
     # 1. Memory Check
