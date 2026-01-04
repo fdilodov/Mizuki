@@ -9,7 +9,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 # --- 1. CONFIGURATION & PERSONA ---
-st.set_page_config(page_title="Mizu (水) - Hyper-K Assistant", page_icon="./images/mizu.png")
+st.set_page_config(
+    page_title="Mizu (水) - Hyper-Kamiokande Assistant", 
+    page_icon="./images/mizu.png",
+    layout="wide"  
+)
 
 # Layout: Logo + Title
 col1, col2 = st.columns([0.10, 0.90], vertical_alignment="center")
