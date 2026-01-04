@@ -1,0 +1,9 @@
+# This is a comment and will be ignored
+# Removing Nuclear Physics as used for a test
+#./documents/5CCP5000__Nuclear_Physics_.pdf
+# Adding TNs related to construction and installation
+./documents/TN0107_Updated_detector_integration_plan.pdf
+./document/TN0110_OD_PMT_Final_Design_v3_20251215.pdf
+./documents/TN0111_ODLEDTN_v1.1.pdf
+./documents/TN0114_IWCD_OD_Design_2.pdf
+./documents/TN0115_OD_Installation_Procedure_Instructions__Copy_-3.pdf
