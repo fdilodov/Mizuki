@@ -1,0 +1,18 @@
+# .gitignore
+__pycache__/
+*.pyc
+.env
+/models/              <-- VERY IMPORTANT: Do not upload the 8GB model
+/env/                 <-- Do not upload your virtual environment
+.DS_Store
+*~
+*/*~
+*.old
+
+# Ignore the raw heavy documents
+documents/*.pdf
+documents/*.PDF
+
+# ... but explicitly keep the text lists
+!documents/sources.txt
+!documents/inputs.txt
