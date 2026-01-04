@@ -9,7 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 def setup_llm():
     """
     Hybrid Setup:
-    1. If GROQ_API_KEY exists -> Use Groq (Cloud, Fast, Llama 3 70B).
+    1. If GROQ_API_KEY exists -> Use Groq (Cloud, Fast, llama-3.3-70b-versatile).
     2. Else -> Use Local Llama (Mac, Offline).
     """
     groq_api_key = os.getenv("GROQ_API_KEY")
@@ -19,7 +19,7 @@ def setup_llm():
         from langchain_groq import ChatGroq
         return ChatGroq(
             temperature=0.0,
-            model_name="llama3-70b-8192", # 70B is excellent for Math/Coding
+            model_name="llama-3.3-70b-versatile", # 70B is excellent for Math/Coding
             api_key=groq_api_key
         )
     else:
