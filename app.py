@@ -34,7 +34,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Layout: Logo + Title
-col1, col2 = st.columns([0.03, 0.97], vertical_alignment="center")
+col1, col2 = st.columns([0.05, 0.95], vertical_alignment="center")
 with col1:
     st.image("./images/mizuhkai_logo.png", width=100)
 with col2:
