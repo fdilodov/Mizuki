@@ -38,7 +38,7 @@ col1, col2 = st.columns([0.05, 0.95], vertical_alignment="center")
 with col1:
     st.image("./images/mizuhkai_logo.png", width=100)
 with col2:
-    st.title("Mizu (水): Hyper-K AI")
+    st.title("Mizu (水): Hyper-Kamiokande AI")
 
 # --- INTRODUCTION SECTION ---
 st.markdown("### Meet the Mizu Research Assistants")
