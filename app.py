@@ -33,6 +33,42 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# --- PASSWORD PROTECTION ---
+def check_password():
+    """Returns `True` if the user had the correct password."""
+
+    # 1. Check if the password was already verified in this session
+    if st.session_state.get("password_correct", False):
+        return True
+
+    # 2. Show Input Box (this stops the rest of the app from loading)
+    # We use columns to center the login box neatly
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.markdown("### 🔒 Mizu Access Restricted")
+        st.info("Please enter the access code to proceed.")
+        password_input = st.text_input("Access Code", type="password", label_visibility="collapsed")
+
+        # 3. Validation Logic
+        if password_input:
+            # Check against the secret in Streamlit Cloud
+            # Make sure 'APP_PASSWORD' is defined in your Secrets!
+            if password_input == st.secrets["APP_PASSWORD"]:
+                st.session_state.password_correct = True
+                st.rerun()  # Reload app to show content
+            else:
+                st.error("😕 Incorrect code. Access denied.")
+
+    return False
+
+# STOP the app here if password is not correct
+if not check_password():
+    st.stop()
+
+# =========================================================
+#  AUTHENTICATED CONTENT STARTS HERE
+# =========================================================
+
 # Layout: Logo + Title
 col1, col2 = st.columns([0.05, 0.95], vertical_alignment="center")
 with col1:
@@ -219,4 +255,3 @@ if prompt_input := st.chat_input("Ask Mizu about PMT modules or water systems...
                 "content": response, 
                 "sources": source_text
             })
-
