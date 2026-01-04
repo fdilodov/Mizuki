@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"  
 )
 
-# Layout: add github manu
+# Layout: hide github menu
 st.markdown("""
     <style>
         .reportview-container {

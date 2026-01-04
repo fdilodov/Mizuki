@@ -1,2 +1,2 @@
-- All technical notes up to 111 fron https://wiki.hyperk.org/
+- All technical notes up to 116 from https://wiki.hyperk.org/
 - The organisation structure in: https://hkdbweb.in2p3.fr/home.htm
