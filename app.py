@@ -15,16 +15,21 @@ st.set_page_config(
     layout="wide"  
 )
 
-# Layout: hide github menu
+# Layout: Hide the Streamlit Header, Main Menu, and Footer
 st.markdown("""
     <style>
-        .reportview-container {
-            margin-top: -2em;
-        }
+        /* Hides the main menu (three dots in top right) */
         #MainMenu {visibility: hidden;}
+        
+        /* Hides the "Deploy" button */
         .stDeployButton {display:none;}
+        
+        /* Hides the footer (Made with Streamlit) */
         footer {visibility: hidden;}
-        #stDecoration {display:none;}
+        
+        /* Hides the entire top header bar (where the GitHub icon lives) */
+        header {visibility: hidden;}
+        [data-testid="stHeader"] {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
