@@ -34,7 +34,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Layout: Logo + Title
-col1, col2 = st.columns([0.95, 0.95], vertical_alignment="center")
+col1, col2 = st.columns([0.01, 0.95], vertical_alignment="center")
 with col1:
     st.image("./images/mizuhkai_logo.png", width=70)
 with col2:
@@ -45,28 +45,28 @@ st.markdown("### Meet the Mizu Research Assistants")
 st.write("**Konnichiwa! I am Mizu (水), your research assistant for the Hyper-Kamiokande experiment.** There are different Mizu research assistants for the Hyper-Kamiokande experiment:")
 
 # Row 1: Mizu Doc (Neon Blue)
-c1, c2 = st.columns([0.05, 0.95], vertical_alignment="center")
+c1, c2 = st.columns([0.01, 0.95], vertical_alignment="center")
 with c1:
     st.image("./images/mizu_doc.png", width=40)
 with c2:
     st.markdown("**Mizu Doc:** For documents and general documentation.")
 
 # Row 2: Mizu Tech (Irish Green)
-c1, c2 = st.columns([0.05, 0.95], vertical_alignment="center")
+c1, c2 = st.columns([0.01, 0.95], vertical_alignment="center")
 with c1:
     st.image("./images/mizu_tech.png", width=40)
 with c2:
     st.markdown("**Mizu Tech:** For detector construction and operation.")
 
 # Row 3: Mizu Soft (Silver)
-c1, c2 = st.columns([0.05, 0.95], vertical_alignment="center")
+c1, c2 = st.columns([0.01, 0.95], vertical_alignment="center")
 with c1:
     st.image("./images/mizu_soft.png", width=40)
 with c2:
     st.markdown("**Mizu Soft:** For software and computing queries.")
 
 # Row 4: Mizu Phys (Old Gold)
-c1, c2 = st.columns([0.05, 0.95], vertical_alignment="center")
+c1, c2 = st.columns([0.01, 0.95], vertical_alignment="center")
 with c1:
     st.image("./images/mizu_phys.png", width=40)
 with c2:
