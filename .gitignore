@@ -16,3 +16,8 @@ documents/*.PDF
 # ... but explicitly keep the text lists
 !documents/sources.txt
 !documents/inputs.txt
+
+#ignore not relevant images
+images/*xcf
+images/*jpg
+
