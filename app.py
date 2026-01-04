@@ -15,6 +15,19 @@ st.set_page_config(
     layout="wide"  
 )
 
+# Layout: add github manu
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+    </style>
+""", unsafe_allow_html=True)
+
 # Layout: Logo + Title
 col1, col2 = st.columns([0.10, 0.90], vertical_alignment="center")
 with col1:
