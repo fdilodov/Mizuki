@@ -1,4 +1,4 @@
-# Mizu (水) - ki (tree) AI Assistant
+# Mizu (水) - ki (木) AI Assistant
 
 Mizu is a RAG (Retrieval-Augmented Generation) chatbot designed to assist researchers at the Hyper-Kamiokande experiment. It uses **Groq (Llama 3.3)** for fast reasoning and **ChromaDB** for local document storage.
 
