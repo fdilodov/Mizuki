@@ -18,12 +18,26 @@ st.set_page_config(
 # --- 2. CSS STYLING ---
 st.markdown("""
     <style>
-        /* Hide Streamlit Default UI elements */
+        /* 1. HIDE STANDARD MENUS */
         #MainMenu {visibility: hidden;}
-        .stDeployButton {display:none;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
+        
+        /* 2. HIDE THE TOP "MANAGE APP" / GITHUB DECORATION */
         [data-testid="stHeader"] {visibility: hidden;}
+        [data-testid="stDecoration"] {visibility: hidden;}
+        
+        /* 3. HIDE THE BOTTOM TOOLBAR / STATUS WIDGET */
+        [data-testid="stStatusWidget"] {visibility: hidden;}
+        [data-testid="stToolbar"] {visibility: hidden;}
+        
+        /* 4. HIDE SPECIFIC BUTTONS (Viewer Badge) */
+        .viewerBadge_container__1QSob {display: none;}
+        
+        /* 5. ADJUST TOP MARGIN (Since header is gone) */
+        .block-container {
+            padding-top: 1rem;
+        }
     </style>
 """, unsafe_allow_html=True)
 
