@@ -21,3 +21,6 @@ documents/*.PDF
 images/*xcf
 images/*jpg
 
+# Avoiding uploading Access Code
+.streamlit/secrets.toml
+
